@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inp {
+  @apply border-2 rounded-md bg-transparent text-neutral-grey500 text-lg font-medium outline-none px-5 h-10
+}
+
+.inp:active,
+.inp:hover,
+.inp:focus {
+  @apply border-primary-green600
+}
+
+.lab {
+  @apply text-neutral-grey900 text-lg font-medium mb-1
+}
+
+.quer:active,
+.quer:focus {
+  @apply border-primary-green600 bg-primary-green200
+}
+
+.quer:hover {
+  @apply border-neutral-grey500
+}
+
+.querytype {
+  @apply accent-primary-green600 
+}
+
+.typ {
+  @apply text-neutral-grey900 text-lg font-medium 
+}
+
+.textarea{
+  @apply border-2 rounded-md bg-transparent text-neutral-grey900 text-base w-full font-medium outline-none px-5 py-3 
+}
+
+.textarea:active,
+.textarea:focus {
+  @apply border-primary-green600
+}
+
