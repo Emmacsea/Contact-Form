@@ -12,7 +12,7 @@ function App() {
 
   // const confirmDetails = () => {
   //   window.alert(`Your details have been successfully been uploaded`)
-  // }
+  //
 
   const onChangeFirstname = (e) => {
     setFirstname(e.target.value);

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import success from "../assets/assets/images/icon-success-check.svg"
+// import checkboxsel from "../assets/assets/images/icon-checkbox-check.svg";
+// import radiosel from "../assets/assets/images/icon-radio-selected.svg";
+import success from "../assets/assets/images/icon-success-check.svg";
 
 export const ContactForm = ({
   firstname,
@@ -33,7 +35,7 @@ export const ContactForm = ({
     if (!lastname) newError.lastname = `This field is required`;
     if (!message) newError.message = `This field is required`;
     if (!query) newError.query = (`Please select a query type`);
-    if(!consent) newError.consent = (`To submit this form, please consent to being contacted`);
+    if (!consent) newError.consent = (`To submit this form, please consent to being contacted`);
 
     if (!emailaddress || !validateEmail(emailaddress))
       newError.emailaddress = `Please enter a valid email address`;
@@ -57,15 +59,15 @@ export const ContactForm = ({
       </div>
       )}
 
-      <div className="flex flex-col items-start py-4 px-6 bg-neutral-white rounded-md w-auto h-auto">
-        <h2 className="text-neutral-grey900 font-bold text-2xl mb-2">
+      <div className="flex flex-col items-start md:py-4 sm:py-2 px-6 bg-neutral-white rounded-md w-auto h-auto">
+        <h2 className="text-neutral-grey900 font-bold md:text-2xl sm:text-xl mb-2">
           Contact Us
         </h2>
 
         <form action="" onSubmit={submitDetails} method="get">
-          <div className="flex flex-col space-y-1">
-            <div className="flex gap-3 items-center">
-              <div className="flex flex-col items-start">
+          <div className="flex flex-col space-y-1 w-full">
+            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-3 w-full">
+              <div className="flex flex-col items-start w-full">
                 <label className="lab" htmlFor="">
                   First Name *
                 </label>
@@ -87,7 +89,7 @@ export const ContactForm = ({
                   )}
                 </div>
               </div>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start w-full">
                 <label className="lab" htmlFor="">
                   Last Name *
                 </label>
